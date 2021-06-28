@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import Button from "../components/button";
+import Button from '../components/button';
 
-import * as Icons from "../components/icons";
+import * as Icons from '../components/icons';
 
 export default {
-   title: "Components/Icons",
+   title: 'Components/Icons',
 };
 
 export const Icon = () => (

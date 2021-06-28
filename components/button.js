@@ -1,9 +1,14 @@
-import React from 'react'
+/* eslint-disable react/prop-types */
+import React from 'react';
 
-import styles from './button.module.css'
+import styles from './button.module.css';
 
-const Button = ({children}) => {
-    return (<button type="button" className={styles.button}>{children}</button>)
-}
+const Button = ({ children, ...props }) => {
+   return (
+      <button type="button" className={styles.button} {...props}>
+         {children}
+      </button>
+   );
+};
 
-export default Button
+export default Button;
