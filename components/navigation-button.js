@@ -3,10 +3,20 @@ import React from 'react';
 
 import Button from './button';
 
+import cn from 'classnames';
+
 import styles from './navigation-button.module.css';
 
-const NavButton = ({ children }) => {
-   return <Button className={styles.navButton}>{children}</Button>;
+const NavigationButton = ({ notify, selected, children, ...props }) => {
+   return (
+      <Button
+         className={cn(styles.navButton, selected && styles.navButtonSelected)}
+         {...props}
+      >
+         {children}
+         {notify && <span className={styles.notify}>{notify}</span>}
+      </Button>
+   );
 };
 
-export default NavButton;
+export default NavigationButton;
