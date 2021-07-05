@@ -2,8 +2,10 @@ import React from 'react';
 
 import Button from '../components/button';
 import NavigationButton from '../components/navigation-button';
-import TitleBold from '../components/title-bold';
+import ThemeButton from '../components/theme-button';
+import TextTitle from '../components/text-title';
 import Navigation from '../components/navigation';
+import Stack from '../components/stack';
 import { Home } from '../components/icons';
 
 export default {
@@ -12,10 +14,19 @@ export default {
 };
 
 export const Normal = () => <Button>Button</Button>;
+export const Theme = () => (
+   <Stack column>
+      <ThemeButton>Tweet</ThemeButton>
+      <ThemeButton full>Tweet Full</ThemeButton>
+      <ThemeButton big full>
+         Tweet Big
+      </ThemeButton>
+   </Stack>
+);
 export const NavButton = () => (
    <NavigationButton>
       <Home />
-      <TitleBold>Button</TitleBold>
+      <TextTitle>Button</TextTitle>
    </NavigationButton>
 );
 export const Nav = () => <Navigation selectedKey="home" />;

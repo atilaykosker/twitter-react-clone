@@ -2,7 +2,7 @@
 import React from 'react';
 
 import NavigationButton from './navigation-button';
-import TitleBold from './title-bold';
+import TextTitle from './text-title';
 import {
    Twitter,
    Home,
@@ -26,12 +26,12 @@ const Navigation = ({ selectedKey }) => {
 
          <NavigationButton selected={selectedKey === 'home'}>
             <Home />
-            <TitleBold>Home</TitleBold>
+            <TextTitle>Home</TextTitle>
          </NavigationButton>
 
          <NavigationButton selected={selectedKey === 'explore'}>
             <Explore />
-            <TitleBold>Explore</TitleBold>
+            <TextTitle>Explore</TextTitle>
          </NavigationButton>
 
          <NavigationButton
@@ -39,32 +39,32 @@ const Navigation = ({ selectedKey }) => {
             selected={selectedKey === 'notification'}
          >
             <Notification />
-            <TitleBold>Notification</TitleBold>
+            <TextTitle>Notifications</TextTitle>
          </NavigationButton>
 
          <NavigationButton selected={selectedKey === 'messages'}>
             <Messages />
-            <TitleBold>Messages</TitleBold>
+            <TextTitle>Messages</TextTitle>
          </NavigationButton>
 
          <NavigationButton selected={selectedKey === 'bookmark'}>
             <Bookmark />
-            <TitleBold>Bookmark</TitleBold>
+            <TextTitle>Bookmarks</TextTitle>
          </NavigationButton>
 
          <NavigationButton selected={selectedKey === 'lists'}>
             <Lists />
-            <TitleBold>Lists</TitleBold>
+            <TextTitle>Lists</TextTitle>
          </NavigationButton>
 
          <NavigationButton selected={selectedKey === 'profile'}>
             <Profile />
-            <TitleBold>Profile</TitleBold>
+            <TextTitle>Profile</TextTitle>
          </NavigationButton>
 
          <NavigationButton selected={selectedKey === 'more'}>
             <More />
-            <TitleBold>More</TitleBold>
+            <TextTitle>More</TextTitle>
          </NavigationButton>
       </nav>
    );
