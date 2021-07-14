@@ -1,8 +1,9 @@
 import React from 'react';
 
-import Button from '../components/button';
-
 import * as Icons from '../components/icons';
+
+import Photo from '../components/photo.js';
+import ProfileBox from '../components/profile-box.js';
 
 export default {
    title: 'Components/Icons',
@@ -40,3 +41,7 @@ export const Icon = () => (
       <Icons.Twitter />
    </div>
 );
+
+export const ProfilePhoto = () => <Photo />;
+
+export const Box = () => <ProfileBox />;
