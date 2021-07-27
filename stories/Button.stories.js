@@ -29,4 +29,11 @@ export const NavButton = () => (
       <TextTitle>Button</TextTitle>
    </NavigationButton>
 );
-export const Nav = () => <Navigation selectedKey="home" />;
+
+const Template = (args) => <Navigation selectedKey="home" {...args} />;
+
+export const Nav = Template.bind({});
+
+Nav.args = {
+   flat: false,
+};

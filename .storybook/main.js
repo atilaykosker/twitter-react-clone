@@ -2,6 +2,7 @@ module.exports = {
    stories: ['../stories/**/*.stories.js', '../stories/**/*.stories.tsx'],
    addons: [
       '@storybook/addon-actions',
+      '@storybook/addon-controls',
       '@storybook/addon-links',
       '@storybook/addon-postcss',
       {
