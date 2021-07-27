@@ -9,15 +9,23 @@ import TextBody from './text-body';
 
 import styles from './profile-box.module.css';
 
-const ProfileBox = ({ name = 'Atılay Köşker', slug = 'atilaykosker' }) => {
+const ProfileBox = ({
+   flat = false,
+   name = 'Atılay Köşker',
+   slug = 'atilaykosker',
+}) => {
    return (
       <Button className={cn([styles.box])}>
-         <Photo />
-         <div className={styles.body}>
-            <TextBody bold>{name}</TextBody>
-            <TextBody className={styles.slug}>@{slug}</TextBody>
-         </div>
-         <ArrowBottom className={styles.icon} />
+         <Photo size={39} />
+         {!flat && (
+            <>
+               <div className={styles.body}>
+                  <TextBody bold>{name}</TextBody>
+                  <TextBody className={styles.slug}>@{slug}</TextBody>
+               </div>
+               <ArrowBottom className={styles.icon} />
+            </>
+         )}
       </Button>
    );
 };

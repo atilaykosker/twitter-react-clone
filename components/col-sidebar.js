@@ -10,10 +10,15 @@ const Sidebar = ({ flat }) => {
    return (
       <div className={cn([styles.sidebar])}>
          <Navigation flat={flat} />
-         <ThemeButton big full>
-            Tweet
+
+         <div className={styles.tweet}>
+         <ThemeButton big full={!flat}>
+            {flat ? 'a' : 'Tweet'}
          </ThemeButton>
-         <ProfileBox></ProfileBox>
+         </div>
+         <div className={styles.profile}>
+            <ProfileBox flat={flat}></ProfileBox>
+         </div>
       </div>
    );
 };
