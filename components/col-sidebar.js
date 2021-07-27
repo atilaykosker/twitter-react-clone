@@ -12,9 +12,9 @@ const Sidebar = ({ flat }) => {
          <Navigation flat={flat} />
 
          <div className={styles.tweet}>
-         <ThemeButton big full={!flat}>
-            {flat ? 'a' : 'Tweet'}
-         </ThemeButton>
+            <ThemeButton big full={!flat}>
+               {flat ? 'a' : 'Tweet'}
+            </ThemeButton>
          </div>
          <div className={styles.profile}>
             <ProfileBox flat={flat}></ProfileBox>
