@@ -1,15 +1,31 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import cn from 'classnames';
-
 import styles from './theme-select.module.css';
+import StoreContext from '../store';
 
-const ThemeSelect = () => {
+const THEME = {
+   light: 'Light',
+   dim: 'Dim',
+   dark: 'Dark',
+};
+
+const ThemeSelect = ({}) => {
+   const store = useContext(StoreContext);
    return (
       <div className={styles.container}>
-         <input type="radio" value="light" name="theme" checked></input>
-         <input type="radio" value="dim" name="theme"></input>
-         <input type="radio" value="dark" name="theme"></input>
+         {['light', 'dim', 'dark'].map((theme) => (
+            <label key={theme} className={styles.label}>
+               <input
+                  type="radio"
+                  value={theme}
+                  name="theme"
+                  checked={theme === store.theme}
+                  onChange={(e) => store.changeTheme(e.target.value)}
+               />
+               {THEME[theme]}
+            </label>
+         ))}
       </div>
    );
 };
